@@ -2,10 +2,15 @@
 
 using namespace std;
 
-int getAverage(int array[], int size){
-    int result = getSum(array, size);
+int getMin(int array[], int size){
+    int result = array[0];
 
-    return static_cast <double>(result) / size;
+    for (int i = 1; i < size; i++){
+        if(array[i] < result)
+            result = array[i];
+    }
+    
+    return result;
 }
 
 int main(){
@@ -13,6 +18,6 @@ int main(){
     int size = 5;
 
     cout << "Summation: " << getSum(array, size) << endl;
-    cout << "Average: " << getAverage(array, size) << endl;
+    cout << "Minimum: " << getMin(array, size) << endl;
     return 0;
 }
