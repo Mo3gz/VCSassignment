@@ -2,13 +2,10 @@
 
 using namespace std;
 
-int getSum(int array[], int size){
-    int result = 0;
+int getAverage(int array[], int size){
+    int result = getSum(array, size);
 
-    for(int i = 0; i < size ; i++)
-        result += array[i];
-
-    return result;
+    return static_cast <double>(result) / size;
 }
 
 int main(){
@@ -16,6 +13,6 @@ int main(){
     int size = 5;
 
     cout << "Summation: " << getSum(array, size) << endl;
-
+    cout << "Average: " << getAverage(array, size) << endl;
     return 0;
 }
