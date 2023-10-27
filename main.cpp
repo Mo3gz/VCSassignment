@@ -2,6 +2,15 @@
 
 using namespace std;
 
+int getSum(int array[], int size){
+    int result = 0;
+
+    for(int i = 0; i < size ; i++)
+        result += array[i];
+
+    return result;
+}
+
 int getAverage(int array[], int size){
     int result = getSum(array, size);
 
